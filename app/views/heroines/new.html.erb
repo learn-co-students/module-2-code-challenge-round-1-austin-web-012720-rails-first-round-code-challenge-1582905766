@@ -1,0 +1,20 @@
+<h2> Heroine New Page </h2>
+
+<ul>
+<% @heroine.errors.full_messages.each do |msg| %>
+<li><%= msg %></li>
+<% end %>
+</ul>
+
+<%= form_for @heroine do |f| %>
+<%= f.label "Name"%>
+<%= f.text_field :name %>
+<br><br>
+<%= f.label "Super Name"%>
+<%= f.text_field :super_name %>
+<br><br>
+<%= f.label "Power Dropdown"%>
+<%= f.collection_select(:power_ids, Power.all, :id, :name, prompt: true) %>
+<br><br>
+<%= f.submit %>
+<% end %>

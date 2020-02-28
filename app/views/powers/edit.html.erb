@@ -1,0 +1,14 @@
+<h2>Power Update Page</h2>
+
+<%= form_for @power do |f| %>
+<%= f.label "Name"%>
+<%= f.text_field :name %>
+<br><br>
+<%= f.label "Description"%>
+<%= f.text_field :description %>
+<br><br>
+<%= f.label "Heroine Dropdown"%><br>
+<%= f.collection_select(:heroine_ids, Heroine.all, :id, :name, prompt: true) %>
+<br><br>
+<%= f.submit %>
+<% end %>
