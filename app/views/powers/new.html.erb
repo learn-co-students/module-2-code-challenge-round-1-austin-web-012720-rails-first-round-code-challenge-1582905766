@@ -1,0 +1,18 @@
+<h3>Update a Super Power</h3>
+
+
+<%= form_for (@power) do |f| %>
+
+    <%= f.label :name %><br>
+    <%= f.text_field :name %><br>
+
+    <%= f.label :description %><br>
+    <%= f.text_area :description %><br>
+
+    <%= f.label :heroine %><br>
+    <%= f.collection_select :heroine_ids, Heroine.all, :id, :name %><br>
+
+<br>
+    <%= f.submit %>
+<br>
+<% end %>
