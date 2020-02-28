@@ -1,10 +1,10 @@
 class HeroinePowersController < ApplicationController
   def index
-    @heroinepowers = Heroinepower.all
+    @heroinepowers = HeroinePower.all
   end
 
   def show
-    @heroinepower = Heroinepower.find(params[:id])
+    @heroinepower = HeroinePower.find(params[:id])
   end
 
   def new
