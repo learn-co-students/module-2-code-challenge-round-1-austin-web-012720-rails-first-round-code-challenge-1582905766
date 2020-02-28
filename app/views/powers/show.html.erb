@@ -1,0 +1,12 @@
+<h2>Super Powers are</h2>
+
+<ul>
+  <% @powers.find.each do |power| %>
+    <li>
+      <%= power.name %>
+      <br>
+      Description: <%= power.description %>
+    </li>
+    <br>
+  <% end %>
+</ul>
