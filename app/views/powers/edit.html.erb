@@ -1,0 +1,13 @@
+<h3> Edit powers </h3>
+
+<%= form_for @power do |f| %>
+
+  <%= f.text_field :name%>
+  <%= f.text_area :description%>
+
+  <%= f.collection_check_boxes :heroine_ids, Heroine.all, :id, :name %> 
+  <%= f.submit%>
+
+<% end %>
+
+

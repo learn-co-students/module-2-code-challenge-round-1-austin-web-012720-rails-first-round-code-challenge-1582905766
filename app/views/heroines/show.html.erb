@@ -1,0 +1,11 @@
+<h3> <%= @heroine.name%> <br>
+aka <br> 
+<%= @heroine.super_name %> </h3>
+<%= @heroine.super_name %> has the following Powers:
+<ul>
+  <% @heroine.powers.each do |power| %>
+    <li> <%= link_to power.name, power_path(power) %> </li>
+  <% end %>
+</ul>
+<br>
+<%= link_to "index", heroines_path%>

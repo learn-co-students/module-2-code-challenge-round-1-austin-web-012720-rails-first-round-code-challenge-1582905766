@@ -24,3 +24,10 @@ heroines = [
 ]
 
 heroines.each { |heroine| Heroine.create(heroine) }
+
+HeroinePower.create(heroine_id: 1, power_id: 2)
+HeroinePower.create(heroine_id: 1, power_id: 1)
+HeroinePower.create(heroine_id: 2, power_id: 2)
+HeroinePower.create(heroine_id: 2, power_id: 1)
+HeroinePower.create(heroine_id: 3, power_id: 1)
+HeroinePower.create(heroine_id: 3, power_id: 3)
