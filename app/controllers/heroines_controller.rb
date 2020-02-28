@@ -14,6 +14,7 @@ class HeroinesController < ApplicationController
   def create
     @heroine = Heroine.new(heroine_params)
     if @heroine.valid?
+      # @heroine.powers << Power.find(heroine_params[:power_ids])
       @heroine.save
       redirect_to heroine_path(@heroine)
     else
@@ -25,6 +26,6 @@ class HeroinesController < ApplicationController
   private
 
   def heroine_params
-    params.require(:heroine).permit(:name, :super_name)
+    params.require(:heroine).permit(:name, :super_name, :power_ids)
   end
 end

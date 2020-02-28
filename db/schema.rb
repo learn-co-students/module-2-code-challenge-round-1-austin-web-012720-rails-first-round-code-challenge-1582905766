@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 20200228161056) do
 
-  create_table "heroinepowers", force: :cascade do |t|
+  create_table "heroine_powers", force: :cascade do |t|
     t.integer "power_id"
     t.integer "heroine_id"
     t.datetime "created_at", null: false

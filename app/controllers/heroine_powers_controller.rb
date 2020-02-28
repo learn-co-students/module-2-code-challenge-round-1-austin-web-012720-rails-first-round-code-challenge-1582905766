@@ -1,6 +1,6 @@
 class HeroinePowersController < ApplicationController
   def index
-    @heroinepowers = HeroinePower.all
+    @heroine_powers = HeroinePower.all
   end
 
   def show
@@ -8,11 +8,11 @@ class HeroinePowersController < ApplicationController
   end
 
   def new
-    @heroinepower = Heroinepower.new
+    @heroinepower = HeroinePower.new
   end
 
   def create
-    @heroinepower = Heroinepower.new(params)
+    @heroinepower = HeroinePower.new(params)
     @heroinepower.save
   end
 end
