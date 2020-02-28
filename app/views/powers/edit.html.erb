@@ -1,0 +1,19 @@
+<% if flash[:messages] %> 
+    <%flash[:messages].each do |m| %>
+        <li><%= m %></li>
+    <% end %>
+<% end %>
+
+<%= form_for( @power ) do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %><br>
+    <%= f.label :description %>
+    <%= f.text_area :description %><br>
+    <br>
+    <% @heroines.each do |heroine| %>
+        <%= f.check_box :heroines, {multiple: true}, heroine.id, false %>
+        <%= f.label heroine.super_name %>
+        <br>
+    <%end%>
+    <%= f.submit %>
+<% end %>
