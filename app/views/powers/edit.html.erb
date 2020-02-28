@@ -1,0 +1,21 @@
+<h1>Create New Heroine</h1>
+<% if @power.errors.any? %>
+<ul>
+  <% @power.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+  <% end %>
+</ul>
+
+<% end %>
+<%= form_for @power do |f| %>
+
+  <%= f.label :name %>:
+  <%= f.text_field :name %><br />
+<br>
+  <%= f.label :description %>:
+  <%= f.text_area :description %><br />
+<br>
+  <%= f.submit %>
+<% end %>
+<br>
+<%=link_to "Back", powers_path%>

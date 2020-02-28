@@ -13,17 +13,17 @@ In this repo, there is a Rails application with some features built out. Your jo
 - ActiveRecord
 - Validations
 
-## Setup
+## Setup - Done
 
 Before you begin coding your solution, clone this repo and then `cd` into it. Then run `bundle install`, `rails db:migrate`, and `rails db:seed` to install dependencies and set up the database, and run `rails s` to start the server.
 
-## Domain
+## Domain - Done
 
 There are three models in the domain: Power, Heroine, and a join model HeroinePower.
 
 Each Heroine can have multiple powers. Powers can belong to multiple Heroines.
 
-## What You Already Have
+## What You Already Have - Done
 
 The starter code has migrations, models, and seed data for the initial Power and Heroine models. There are also routes, controllers and views to support the Power and Heroine index pages.
 
@@ -55,7 +55,7 @@ Update the code of the application to meet the following deliverables. Follow RE
 
 ***Read through these deliverables carefully to understand the requirements for this code challenge. Tackle them one by one, as they build on each other sequentially.***
 
-### 1. Heroine-Power association
+### 1. Heroine-Power association - Done
 
 Create the association between the models. Update the schema and models to create the HeroinePower association.
 
@@ -66,25 +66,25 @@ A HeroinePower should have a:
 
 Each Heroine can have multiple powers. Powers can belong to multiple Heroines.
 
-### 2. Heroine index page links
+### 2. Heroine index page links - done
 
 On the heroines index page, a heroine's super name should link to that heroine's show page.
 
-### 3. Heroine show page
+### 3. Heroine show page - Done
 
 Each Heroine show page should include the:
 
 - name (eg. Kamala Khan)
 - super name (eg. Ms. Marvel)
 
-### 4. Power show page
+### 4. Power show page - Done
 
 Power show page should include the:
 
 - name
 - description
 
-### 5. Heroine Create page
+### 5. Heroine Create page - Done
 
 Show a form to create a new Heroine. It should have:
 
@@ -95,7 +95,7 @@ Show a form to create a new Heroine. It should have:
 
 After successfully creating a Heroine, the user should be redirected to the new Heroine's show page.
 
-### 6. Heroine Validations
+### 6. Heroine Validations - done
 
 Add validations to the Heroine model:
 
@@ -104,7 +104,7 @@ Add validations to the Heroine model:
 
 Add error handling to the create action. If a user tries to create an invalid Heroine, the user should see the validation errors.
 
-### 7. Advanced: Heroine Super Name Validation
+### 7. Advanced: Heroine Super Name Validation - done
 
 No two heroines should have the same super name.
 
