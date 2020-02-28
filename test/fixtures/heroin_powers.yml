@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  heroin_id: 1
+  power_id: 1
+
+two:
+  heroin_id: 1
+  power_id: 1
