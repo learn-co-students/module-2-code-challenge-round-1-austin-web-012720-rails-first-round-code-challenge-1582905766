@@ -1,0 +1,13 @@
+<%= form_for @power do |f|%>
+    <%= f.label :name%><br>
+    <%= f.text_field :name%><br>
+    <%= f.label :description %><br>
+    <%= f.text_field :description%><br>
+   <ul>
+   <% Heroine.all.each do |heroine| %>
+    <li><%= heroine.name %> <%= check_box_tag(:heroine_ids, heroine.id)%></li>
+    <% end %>
+ 
+   </ul>
+    <%= f.submit%>
+    <% end %>
