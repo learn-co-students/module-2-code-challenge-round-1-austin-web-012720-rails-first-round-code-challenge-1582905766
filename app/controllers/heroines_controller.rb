@@ -11,6 +11,18 @@ class HeroinesController < ApplicationController
     @heroine = Heroine.new
   end
 
+  def edit
+    @heroine = Heroine.find(params[:id])
+  end
+
+  def update
+    @heroine = Heroine.find(params[:id])
+    @heroine.update(heroine_params)
+    redirect_to heroine_path(@heroine)
+  end
+
+
+
   def create
     @heroine = Heroine.new(heroine_params)
     if @heroine.valid?
