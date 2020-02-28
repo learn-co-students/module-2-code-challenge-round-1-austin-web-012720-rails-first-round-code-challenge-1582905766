@@ -55,7 +55,7 @@ Update the code of the application to meet the following deliverables. Follow RE
 
 ***Read through these deliverables carefully to understand the requirements for this code challenge. Tackle them one by one, as they build on each other sequentially.***
 
-### 1. Heroine-Power association
+### [x] 1. Heroine-Power association
 
 Create the association between the models. Update the schema and models to create the HeroinePower association.
 
@@ -66,52 +66,52 @@ A HeroinePower should have a:
 
 Each Heroine can have multiple powers. Powers can belong to multiple Heroines.
 
-### 2. Heroine index page links
+### [x] 2. Heroine index page links
 
 On the heroines index page, a heroine's super name should link to that heroine's show page.
 
-### 3. Heroine show page
+### [x] 3. Heroine show page
 
 Each Heroine show page should include the:
 
 - name (eg. Kamala Khan)
 - super name (eg. Ms. Marvel)
 
-### 4. Power show page
+### [x] 4. Power show page (done?)
 
 Power show page should include the:
 
-- name
-- description
+x name
+x description
 
-### 5. Heroine Create page
+### [ ] 5. Heroine Create page (missing)
 
 Show a form to create a new Heroine. It should have:
 
-- an input for name
-- an input for super name
+x an input for name
+x an input for super name
 - a select dropdown to choose a power
-- a submit button to create the Heroine
+x a submit button to create the Heroine
 
 After successfully creating a Heroine, the user should be redirected to the new Heroine's show page.
 
-### 6. Heroine Validations
+### [x] 6. Heroine Validations
 
 Add validations to the Heroine model:
 
-- must have a name
-- must have a super name
+x must have a name
+X must have a super name
 
 Add error handling to the create action. If a user tries to create an invalid Heroine, the user should see the validation errors.
 
-### 7. Advanced: Heroine Super Name Validation
+### [x] 7. Advanced: Heroine Super Name Validation
 
 No two heroines should have the same super name.
 
-- Add a validation to prevent this.
-- Update the error handling in the create action to display this error
+x Add a validation to prevent this.
+x Update the error handling in the create action to display this error
 
-### 8. Advanced: Display Heroines' Powers
+### [ ] 8. Advanced: Display Heroines' Powers
 
 Update the Heroine show page to display the Powers that the heroine has.
 
