@@ -3,10 +3,17 @@
 <ul>
   <% @powers.each do |power| %>
     <li>
+      <%= "Type of Power: " %><br> 
       <%= power.name %>
+      <br>
+      <br>
+      <%= "Number of Heroines with this Power: " %><br>
+      <%= power.total_heroines%>
+      <br>
       <br>
       Description: <%= power.description %>
     </li>
     <br>
   <% end %>
 </ul>
+

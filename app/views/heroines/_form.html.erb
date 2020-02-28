@@ -1,0 +1,26 @@
+<% if flash[:errors] %>
+<ul>
+  <% flash[:errors].each do |error| %>
+  <li> <%= error %></li>
+  <% end %>
+</ul>
+<% end %>
+
+
+
+<%= form_for @heroine do |f| %>
+  <%= f.label "Name: " %><br>
+  <%= f.text_field :name %>
+  <br>
+  <br>
+  <%= f.label "What is Your Super Name: " %><br>
+  <%= f.text_field :super_name %>
+  <br>
+  <br>
+
+  <%= f.label "Choose a Power: " %>
+  <%= f.collection_select(:power_ids, Power.all, :id, :name)%>
+  <br>
+  <br>
+  <%= f.submit %>
+<% end %>

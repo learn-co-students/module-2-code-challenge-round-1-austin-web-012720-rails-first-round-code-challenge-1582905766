@@ -1,0 +1,23 @@
+<% if flash[:errors] %>
+<ul>
+  <% flash[:errors].each do |error| %>
+  <li> <%= error %></li>
+  <% end %>
+</ul>
+<% end %>
+
+
+
+<%= form_for @power do |f| %>
+  <%= f.label "Name of Super Power: " %>
+  <%= f.text_field :name %><br>
+
+  <%= f.label "Description: " %>
+  <%= f.text_area :description %><br>
+
+  <%= f.label "Choose a Heroine" %>
+  <%= f.collection_check_boxes(:heroine_ids, Heroine.all, :id, :name)%>
+
+  <%= f.submit %>
+<% end %>
+
