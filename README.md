@@ -61,8 +61,8 @@ Create the association between the models. Update the schema and models to creat
 
 A HeroinePower should have a:
 
-- a heroine
-- a power
+x a heroine
+x a power
 
 Each Heroine can have multiple powers. Powers can belong to multiple Heroines.
 
@@ -117,7 +117,7 @@ Update the Heroine show page to display the Powers that the heroine has.
 
 Each power should link to the corresponding Power show page.
 
-### 9. Advanced: Power Update Form to Link Multiple Heroines
+### [ ] 9. Advanced: Power Update Form to Link Multiple Heroines
 
 Show a form to update a Power. It should have:
 
@@ -132,7 +132,7 @@ When the form successfully saves, the user should be redirected to the Power sho
 
 The power show page should show a link to the edit page.
 
-### 10. Advanced: Powers Index Page Display Heroine Count
+### [ ] 10. Advanced: Powers Index Page Display Heroine Count
 
 On the Powers index page, show the total number of Heroines for each Power.
 
