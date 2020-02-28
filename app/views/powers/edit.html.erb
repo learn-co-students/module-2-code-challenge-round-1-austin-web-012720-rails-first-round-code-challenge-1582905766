@@ -1,0 +1,11 @@
+<h1>Update</h1>
+
+<%= form_for @power do |f|%>
+<%= f.label :name%>
+<%= f.text_field :name%><br><br>
+<%= f.label :description%>
+<%= f.text_area :description%><br><br>
+<%= f.label :heroine%>
+<%= select_tag(:heroine_id, options_for_select(Heroine.all, :name), multiple: true) %>
+<%= f.submit%>
+<%end%>

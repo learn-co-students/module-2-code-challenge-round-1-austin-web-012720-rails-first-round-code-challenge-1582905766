@@ -1,0 +1,14 @@
+<h1> <%= @power.name %> </h1>
+
+<h3> <%= @power.description %> </h3>
+<br>
+<br>
+<br>
+
+<p>Right now this many heroines have this power:</p><br>
+<%= @power.heroine_count%>
+
+
+<%= link_to "Edit this power", edit_power_path%><br>
+
+<%= link_to "Back to all powers", powers_path%>

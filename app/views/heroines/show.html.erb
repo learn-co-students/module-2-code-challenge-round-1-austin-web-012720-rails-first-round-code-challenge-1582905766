@@ -1,0 +1,12 @@
+<h1> <%= @heroine.super_name %> </h1>
+
+<h3> <%= @heroine.name %> </h3>
+
+<% if @heroine.powers %>
+    <% @heroine.powers.each do |p|%>
+    <h4><%= p.name %></h4>
+    <p><%= p.description%><p>
+    <% end %>
+<% else %>
+    </p> They have no powers yet </p>
+<% end %>
