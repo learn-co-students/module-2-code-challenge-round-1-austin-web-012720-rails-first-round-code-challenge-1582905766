@@ -1,0 +1,8 @@
+<%= form_for @power do |p| %>
+Name: <%= p.text_field :name %> <br/>
+Description: <%= p.text_area :description %> <br/>
+      <% @power.heroines.each do |h| %>
+      <%= check_box heroine.super_name%>
+      <%end%>
+<%=p.submit%>
+<%end %>
