@@ -3,9 +3,10 @@
 <ul>
   <% @powers.each do |power| %>
     <li>
-      <%= power.name %>
+      <%= link_to power.name, powers_path(power) %>
       <br>
       Description: <%= power.description %>
+      Total Heroines: <%= power.heroine_count.to_s %>
     </li>
     <br>
   <% end %>

@@ -1,0 +1,18 @@
+    <% if @heroine.errors.full_messages.any? %>
+  <% @heroine.errors.full_messages.each do |error_message| %>
+    <%= error_message if @heroine.errors.full_messages.first == error_message %> <br />
+  <% end %>
+  <% end %>
+<%= form_for @heroine do |f|%>
+
+    <%= f.label :name %> 
+    <%= f.text_field :name %>
+    
+    <%= f.label :super_name %> 
+    <%= f.text_field :super_name %>
+
+    <%= f.collection_select :power_ids, Power.all, :id, :name %>
+
+    <%= f.submit%>
+
+<%end%>

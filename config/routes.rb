@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
-  resources :powers, only: [:index]
-  resources :heroines, only: [:index]  
+  resources :heroine_powers
+  resources :powers
+  resources :heroines  
+
+  post 'powers/:id/edit', to: 'powers#edit'
+  get 'powers/:id/show', to: 'powers#show'
 end

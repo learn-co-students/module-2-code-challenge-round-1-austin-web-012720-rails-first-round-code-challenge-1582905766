@@ -1,0 +1,15 @@
+<%=form_for @power do |f|%>
+<h1>CURRENT NAME: <%=@power.name%></h1> <br>
+    <%= f.text_area :name %>
+<h1>CURRENT DESCRIPTION<%=@power.description%></h1><br>
+    <%= f.text_area :description %>
+    <ul>
+    <% @power.heroines.each do |heroine|%>
+    <li>
+        <%= check_box_tag 'heroine:[]', heroine.id %>
+        <%= h heroine.name %>
+        </li>
+    <%end%>
+    </ul>
+    <%= f.submit%>
+<%end%>
