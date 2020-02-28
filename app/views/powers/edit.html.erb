@@ -1,0 +1,26 @@
+<h1>Edit a Power</h1>
+
+<%= form_for(@power) do |f| %>
+
+  <% if @power.errors.any? %>
+      <div id="error_explanation">
+        <h3>Please fix the following errors:</h3>
+        <ul>
+          <% @power.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+  <% end %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name %><br>
+
+  <%= f.label :description %>
+  <%= f.text_area :description %><br>
+
+  <%= f.label 'Add to Heroines:' %>
+  <%= f.collection_check_boxes(:heroine_ids, Heroine.all, :id, :super_name)%><br>
+
+  <%= f.submit %>
+<% end %>
