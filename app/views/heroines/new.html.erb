@@ -14,7 +14,7 @@
     <%= f.text_field :super_name %> 
     <br>
     <%= f.label :power %>
-    <%= f.collection_select(:powers, Power.all, :id, :name) %>
+    <%= f.collection_select(:power_id, Power.all, :id, :name) %>
     <%= f.submit %>
 
 <% end %>

@@ -1,10 +1,12 @@
 class HeroinesController < ApplicationController
+  
   before_action :get_heroine, only: [:show, :edit]
+
   def index
     @heroines = Heroine.all
   end
 
-  def show 
+  def show
   end 
 
   def new
