@@ -14,6 +14,7 @@ class HeroinesController < ApplicationController
   def create
     @heroine = Heroine.new(name: heroine_params[:name], super_name: heroine_params[:super_name])
 
+    # Heroine.create(heroine_params)
 
     if @heroine.valid?
       power = Power.find(heroine_params[:power_ids]) if heroine_params[:power_ids]
